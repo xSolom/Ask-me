@@ -11,8 +11,8 @@ from langchain.callbacks import get_openai_callback
 
 def main():
     load_dotenv()
-    st.set_page_config(page_title="Ask your PDF")
-    st.header("Ask your PDF 💬")
+    st.set_page_config(page_title="Ask me")
+    st.header("Ask me 💬")
     
     # upload file
     pdf = st.file_uploader("Upload your PDF", type="pdf")
@@ -38,7 +38,7 @@ def main():
       knowledge_base = FAISS.from_texts(chunks, embeddings)
       
       # show user input
-      user_question = st.text_input("Ask a question about your PDF:")
+      user_question = st.text_input("Ask me a question:")
       if user_question:
         docs = knowledge_base.similarity_search(user_question)
         
