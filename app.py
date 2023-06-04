@@ -23,8 +23,8 @@ def main():
     option = st.selectbox(
         'Please select the county',
         ('None', 'Egypt',
-         'KSA ', 'UAE ',
-         'India '), label_visibility=st.session_state.visibility,
+         'KSA', 'UAE',
+         'India'), label_visibility=st.session_state.visibility,
         disabled=st.session_state.disabled)
 
     filename = option + '.pdf'
